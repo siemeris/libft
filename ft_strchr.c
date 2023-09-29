@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: issierra <issierra@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: issierra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 12:40:08 by issierra          #+#    #+#             */
-/*   Updated: 2023/09/28 09:19:31 by issierra         ###   ########.fr       */
+/*   Created: 2023/09/18 11:08:22 by issierra          #+#    #+#             */
+/*   Updated: 2023/09/23 22:01:08 by issierra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The function ft_isalpha() returns a non-zero value if the character passed 
-// as an argument is an alphabetic character.
+#include "libft.h"
 
-int	ft_isalpha(int c)
+char	*ft_strchr(const char *s, int c)
 {
-	if (('A' <= c && c <= 'Z')
-		|| ('a' <= c && c <= 'z'))
-		return (1);
+	while (*s && *s != (char)c)
+		s++;
+	if (*s == (char)c)
+		return ((char *)s);
 	return (0);
 }

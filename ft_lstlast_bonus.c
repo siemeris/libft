@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: issierra <issierra@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: issierra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 12:40:08 by issierra          #+#    #+#             */
-/*   Updated: 2023/09/28 09:19:31 by issierra         ###   ########.fr       */
+/*   Created: 2023/09/24 16:35:14 by issierra          #+#    #+#             */
+/*   Updated: 2023/09/26 09:39:39 by issierra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The function ft_isalpha() returns a non-zero value if the character passed 
-// as an argument is an alphabetic character.
+#include "libft.h"
 
-int	ft_isalpha(int c)
+// lst: el principio de la lista.
+// Devuelve el último nodo de la lista.
+
+t_list	*ft_lstlast(t_list *lst)
 {
-	if (('A' <= c && c <= 'Z')
-		|| ('a' <= c && c <= 'z'))
-		return (1);
-	return (0);
+	while (lst && lst->next)
+		lst = lst->next;
+	return (lst);
 }

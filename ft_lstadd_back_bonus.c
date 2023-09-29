@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: issierra <issierra@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: issierra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 12:40:08 by issierra          #+#    #+#             */
-/*   Updated: 2023/09/28 09:19:31 by issierra         ###   ########.fr       */
+/*   Created: 2023/09/24 17:07:18 by issierra          #+#    #+#             */
+/*   Updated: 2023/09/26 09:33:57 by issierra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The function ft_isalpha() returns a non-zero value if the character passed 
-// as an argument is an alphabetic character.
+#include "libft.h"
 
-int	ft_isalpha(int c)
+// **lst es el puntero al primer nodo de la lista
+// *lst es el principio de la lista
+
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (('A' <= c && c <= 'Z')
-		|| ('a' <= c && c <= 'z'))
-		return (1);
-	return (0);
+	if (!lst || !new)
+		return ;
+	if (!*lst)
+		*lst = new;
+	else
+		ft_lstlast(*lst)->next = new;
 }

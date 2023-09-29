@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: issierra <issierra@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: issierra <issierra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 12:40:08 by issierra          #+#    #+#             */
-/*   Updated: 2023/09/28 09:19:31 by issierra         ###   ########.fr       */
+/*   Created: 2023/09/15 09:04:17 by issierra          #+#    #+#             */
+/*   Updated: 2023/09/16 18:14:34 by issierra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The function ft_isalpha() returns a non-zero value if the character passed 
-// as an argument is an alphabetic character.
-
-int	ft_isalpha(int c)
+int	ft_isprint(int c)
 {
-	if (('A' <= c && c <= 'Z')
-		|| ('a' <= c && c <= 'z'))
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }

@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: issierra <issierra@student.42madrid.com    +#+  +:+       +#+        */
+/*   By: issierra <issierra@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/06 12:40:08 by issierra          #+#    #+#             */
-/*   Updated: 2023/09/28 09:19:31 by issierra         ###   ########.fr       */
+/*   Created: 2023/09/18 19:15:21 by issierra          #+#    #+#             */
+/*   Updated: 2023/09/19 07:13:28 by issierra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// The function ft_isalpha() returns a non-zero value if the character passed 
-// as an argument is an alphabetic character.
+#include "libft.h"
 
-int	ft_isalpha(int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (('A' <= c && c <= 'Z')
-		|| ('a' <= c && c <= 'z'))
-		return (1);
+	unsigned int	i;
+
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	{
+		if (s1[i] == s2[i])
+		{
+			i++;
+		}
+		else
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	}
 	return (0);
 }
