@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: issierra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: issierra <issierra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 20:44:14 by issierra          #+#    #+#             */
-/*   Updated: 2023/09/26 09:37:31 by issierra         ###   ########.fr       */
+/*   Updated: 2023/10/01 10:58:55 by issierra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,3 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	del(lst->content);
 	free(lst);
 }
-
-	// if (lst)
-	//     lst = lst -> next;
-	// del(lst);
-	// free(lst);

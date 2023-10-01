@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: issierra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: issierra <issierra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 16:15:48 by issierra          #+#    #+#             */
-/*   Updated: 2023/09/26 09:40:53 by issierra         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:37:44 by issierra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// Cuenta el número de nodos de una lista.
 
 int	ft_lstsize(t_list *lst)
 {

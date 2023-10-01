@@ -6,9 +6,12 @@
 /*   By: issierra <issierra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 13:50:11 by issierra          #+#    #+#             */
-/*   Updated: 2023/09/28 08:51:56 by issierra         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:14:26 by issierra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// The atoi() function converts the initial portion of the string pointed to 
+// by str to int representation.
 
 int	ft_atoi(const char *str)
 {

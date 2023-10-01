@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: issierra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: issierra <issierra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 18:20:48 by issierra          #+#    #+#             */
-/*   Updated: 2023/09/26 09:40:26 by issierra         ###   ########.fr       */
+/*   Updated: 2023/10/01 12:45:41 by issierra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,48 +30,25 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*aux;
-	t_list	*new;
+	t_list	*newnode;
+	t_list	*newlist;
+	void	*content;
 
+	newlist = NULL;
 	if (!lst || !f)
 		return (NULL);
-	new = NULL;
 	while (lst)
-	{
-		aux = ft_lstnew((*f)(lst->content));
-		if (!aux)
+	{	
+		content = f(lst->content);
+		newnode = ft_lstnew(content);
+		if (!newnode)
 		{
-			ft_lstclear(&new, del);
+			del(content);
+			ft_lstclear(&newlist, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&new, aux);
+		ft_lstadd_back(&newlist, newnode);
 		lst = lst->next;
 	}
-	return (new);
+	return (newlist);
 }
-
-// t_list	*ft_lstmap(t_list *lst, void *(*f)(void*), void (*del)(void*))
-// {
-// 	t_list	*new;
-// 	t_list	*aux;
-
-// 	if (lst)
-// 	{
-// 		new = ft_lstnew(f(lst->content));
-// 		aux = new;
-// 		while (lst->next)
-// 		{
-// 			lst = lst->next;
-// 			new->next = ft_lstnew(f(lst->content));
-// 			if (!new->next)
-// 			{
-// 				del(new->next);
-// 				free(new->next);
-// 				return (NULL);
-// 			}
-// 			new = new->next;
-// 		}
-// 		return (aux);
-// 	}
-// 	return (NULL);
-// }

@@ -3,14 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: issierra <issierra@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 09:34:26 by issierra          #+#    #+#             */
-/*   Updated: 2023/09/18 10:09:13 by issierra         ###   ########.fr       */
+/*   Updated: 2023/09/29 07:49:11 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+// It copies up to dstsize - 1 characters from the string src to dst, 
+// NUL-terminating the result if dstsize is not 0.
+
+// It returns the total length of the string they tried to create.  
+// For strlcpy() that means the length of src. 
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

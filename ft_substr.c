@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: issierra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: issierra <issierra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 11:03:56 by issierra          #+#    #+#             */
-/*   Updated: 2023/09/26 09:41:14 by issierra         ###   ########.fr       */
+/*   Updated: 2023/09/29 11:18:13 by issierra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,10 @@
 //Si la long de la cadena original es menor que len, se devuelve la long 
 //de la cadena original
 //strlcpy incluye el nulo
+
+// Reserva (con malloc(3)) y devuelve una substring de la string ’s’.
+// La substring empieza desde el índice ’start’ y tiene una longitud 
+// máxima ’len’.
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

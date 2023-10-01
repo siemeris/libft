@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: issierra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: issierra <issierra@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 09:18:17 by issierra          #+#    #+#             */
-/*   Updated: 2023/09/26 09:36:02 by issierra         ###   ########.fr       */
+/*   Updated: 2023/10/01 10:57:42 by issierra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,3 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	}
 	*lst = NULL;
 }
-
-	// t_list *next_elem;
-
-	// if (!lst || !del)
-	//     return ;
-	// next_elem = *lst;
-	// while (*lst)
-	// {
-	//     next_elem = next_elem->next;
-	//     del(next_elem->content);
-	//     free(lst);
-	//     *lst = next_elem;
-	// }
