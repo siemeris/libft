@@ -6,7 +6,7 @@
 #    By: issierra <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/12 16:46:07 by issierra          #+#    #+#              #
-#    Updated: 2023/09/28 08:40:39 by issierra         ###   ########.fr        #
+#    Updated: 2023/10/02 12:21:33 by issierra         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ OBJS_BONUS = $(SRC_BONUS:.c=.o)
 $(NAME): $(OBJS)
 	ar rcs ${NAME} ${OBJS}
 
-bonus: $(NAME) $(OBJS_BONUS)
+bonus: $(OBJS_BONUS)
 	ar rcs ${NAME} ${OBJS_BONUS}
 
 clean:
