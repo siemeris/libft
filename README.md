@@ -50,7 +50,7 @@ Libc functions | Additional functions | Bonus Functions |
 [ft_tolower](#ft_tolower)	|   | | 
 [ft_calloc](#ft_calloc)     |   | |
 
-## [ft_memset](libft/ft_memset.c)
+## [ft_memset](./ft_memset.c)
 
 `void       *ft_memset(void *s, int c, size_t len)`
 
